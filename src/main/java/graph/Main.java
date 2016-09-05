@@ -15,12 +15,16 @@ public class Main {
 
 //        session.run( "CREATE (a:Person {name:'Arthur', title:'King'})" );
 
-        StatementResult result = session.run("MATCH (p:Point) RETURN ID(p) as name");
+        for(int i=0; i<30; i++){
+            StatementResult result = session.run(String.format("CREATE (p:Point {name:'Point%s'})", i));
+        }
+
+       /* StatementResult result = session.run("MATCH (p:Point) RETURN ID(p) as name");
         while (result.hasNext()) {
             Record record = result.next();
 //            System.out.println(record.values().stream().map(v->v.containsKey("name")).collect(Collectors.toList()));
             System.out.println(record.get("name").asInt());
-        }
+        }*/
 
         session.close();
         driver.close();
