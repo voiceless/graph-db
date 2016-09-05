@@ -3,11 +3,9 @@ package graph.model;
 /**
  * Created by pbezglasnyi.
  */
-public interface Link {
+public class Link {
 
-    LinkType type();
-
-    Point from();
-
-    Point to();
+    protected LinkType type;
+    protected Point from;
+    protected Point to;
 }
