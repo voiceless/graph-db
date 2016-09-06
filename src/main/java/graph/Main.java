@@ -2,8 +2,6 @@ package graph;
 
 import org.neo4j.driver.v1.*;
 
-import java.util.stream.Collectors;
-
 /**
  * Created by pbezglasnyi.
  */
@@ -15,7 +13,7 @@ public class Main {
 
 //        session.run( "CREATE (a:Person {name:'Arthur', title:'King'})" );
 
-        for(int i=0; i<30; i++){
+        for (int i = 0; i < 30; i++) {
             StatementResult result = session.run(String.format("CREATE (p:Point {name:'Point%s'})", i));
         }
 
