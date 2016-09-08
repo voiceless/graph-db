@@ -6,4 +6,6 @@ MATCH (f:Point {name:'First'}) MATCH (s:Point{name:'Second'}) CREATE (f)-[d:DIRE
 
 MATCH (f:Point { name:"Point0" }),(s:Point { name:"Point8" }), p = shortestPath((f)-[*]-(s)) RETURN p;
 
-MATCH (f:Point{name:'Point0'})-[*]->(s:Point{name:'Point8'}) RETURN count(*)>0;
+MATCH (f:Point{name:'First'})-[*]->(s:Point{name:'Second'}) RETURN count(*)>0;
+
+MATCH (p:Point) RETURN p;
