@@ -26,6 +26,5 @@ public class Main {
 
         session.close();
         driver.close();
-
     }
 }
